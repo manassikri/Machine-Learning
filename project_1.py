@@ -1,6 +1,6 @@
 """
-A simpleand a very easy way project to understand the linear regressionmodel of machine learning with this basic example.
-Wehavetaken two numpy arrays x_valuesand y_values.In this example we train our model using these arrays(for every vaule of x we have a subsequent value in y).
+A simple and a very easy way project to understand the linear regression model of machine learning with this basic example.
+We have taken two numpy arrays x_values and y_values.In this example we train our model using these arrays(for every vaule of x we have a subsequent value in y).
 The linear regression model follows the equation of simple line y=mx+b, were
 y= output
 x= input
