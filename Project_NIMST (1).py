@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[5]:
 
 
 # TensorFlow and tf.keras
@@ -15,26 +12,26 @@ import matplotlib.pyplot as plt
 print(tf.__version__)
 
 
-# In[6]:
+
 
 
 fashion_mnist = keras.datasets.fashion_mnist
 
 
-# In[7]:
+
 
 
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 
 
-# In[8]:
+
 
 
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
 
-# In[9]:
+
 
 
 plt.figure(figsize=(10,10))
@@ -47,7 +44,7 @@ for i in range(25):
     plt.xlabel(class_names[train_labels[i]])
 
 
-# In[10]:
+
 
 
 train_images = train_images / 255.0
@@ -55,7 +52,6 @@ train_images = train_images / 255.0
 test_images = test_images / 255.0
 
 
-# In[11]:
 
 
 plt.figure(figsize=(10,10))
@@ -68,7 +64,6 @@ for i in range(25):
     plt.xlabel(class_names[train_labels[i]])
 
 
-# In[12]:
 
 
 model = keras.Sequential([
@@ -78,7 +73,7 @@ model = keras.Sequential([
 ])
 
 
-# In[13]:
+
 
 
 model.compile(optimizer=tf.train.AdamOptimizer(), 
@@ -86,13 +81,13 @@ model.compile(optimizer=tf.train.AdamOptimizer(),
               metrics=['accuracy'])
 
 
-# In[20]:
+
 
 
 model.fit(train_images, train_labels, epochs=10)
 
 
-# In[21]:
+
 
 
 test_loss, test_acc = model.evaluate(test_images, test_labels)
@@ -100,37 +95,21 @@ test_loss, test_acc = model.evaluate(test_images, test_labels)
 print('Test accuracy:', test_acc)
 
 
-# In[16]:
+
 
 
 predictions = model.predict(test_images)
 
 
-# In[17]:
+
 
 
 np.argmax(predictions[0])
 
 
-# In[ ]:
 
 
 
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
